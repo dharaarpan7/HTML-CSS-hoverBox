@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh; /*must have height to enable flex box*/
+    background-color: #A2D2FF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+p{
+    padding-top: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+}
+.mainbox{
+    height: 190px;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 25px black;
+    transition: height 0.5s ease-in-out;
+    cursor: pointer;    
+}
+.imagebox{
+    height: 170px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    bottom: 20px;
+    z-index: 1;
+}
+#img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.content{
+    padding: 10px 40px;
+    visibility: hidden;
+    transform: translateY(-200px);
+    transition: 0.5s ease-in-out;   
+    text-align: center; 
+}
+.mainbox:hover{
+    height: 300px;
+}
+.mainbox:hover > .content{
+    transform: translateY(-20px) ;
+     visibility: visible;
+}
+
